@@ -1154,6 +1154,7 @@ function getSource(settings) {
     return __awaiter(this, void 0, void 0, function* () {
         // Repository URL
         core.info(`Syncing repository: ${settings.repositoryOwner}/${settings.repositoryName}`);
+        core.info(`Ref ${settings.ref}`);
         const repositoryUrl = urlHelper.getFetchUrl(settings);
         // Remove conflicting file path
         if (fsHelper.fileExistsSync(settings.repositoryPath)) {

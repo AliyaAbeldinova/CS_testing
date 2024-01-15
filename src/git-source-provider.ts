@@ -17,6 +17,7 @@ export async function getSource(settings: IGitSourceSettings): Promise<void> {
   core.info(
     `Syncing repository: ${settings.repositoryOwner}/${settings.repositoryName}`
   )
+  core.info(`Ref ${settings.ref}`)
   const repositoryUrl = urlHelper.getFetchUrl(settings)
 
   // Remove conflicting file path
